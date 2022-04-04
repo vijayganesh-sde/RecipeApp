@@ -11,10 +11,10 @@ struct TabBar: View {
     var body: some View {
         TabView{
             homeView().tabItem{Label("Home", systemImage: "house")}
+            SearchView(recipes: Recipe.all).tabItem{Label("Search", systemImage: "magnifyingglass")}
             categoriesView().tabItem{Label("Categories",systemImage: "shippingbox")}
-            newRecipeView().tabItem{Label("New", systemImage: "plus.app")}
             favouritesView().tabItem{Label("Favourites", systemImage: "wand.and.stars")}
-            settingsView().tabItem{Label("Settings", systemImage: "slider.horizontal.3")}
+            
         }
     }
 }

@@ -10,7 +10,20 @@ import SwiftUI
 struct categoriesView: View {
     var body: some View {
         NavigationView{
-            Text("Cuisines").navigationTitle("Cuisines")
+            List{
+                ForEach(Category.allCases){ category in
+                    NavigationLink {
+                        ScrollView{
+                            RecipeList(recipes: Recipe.all.filter{$0.Cuisine==category.rawValue})
+                        }
+                    } label: {
+                        Text(category.rawValue )
+                    }
+
+                  
+                }
+            }
+            .navigationTitle("Cuisines")
         }.navigationViewStyle(.stack)
         
     }

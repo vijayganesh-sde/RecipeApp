@@ -12,7 +12,7 @@ struct RecipeList: View {
     var body: some View {
         VStack{
             HStack{
-                Text("Results of \(recipes.count) \(recipes.count>1 ? "Recipes" : "Recipe")")
+                Text(" Results of \(recipes.count) \(recipes.count>1 ? "Recipes" : "Recipe")")
                     .font(.headline)
                     .fontWeight(.medium)
                     .opacity(0.5)
@@ -32,6 +32,7 @@ struct RecipeList: View {
         .padding(.horizontal)
         
     }
+    
 }
 
 struct RecipeList_Previews: PreviewProvider {

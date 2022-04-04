@@ -6,7 +6,8 @@
 //
 
 import Foundation
-enum Category:String{
+enum Category:String , CaseIterable, Identifiable{
+    var id:String {self.rawValue}
     case indian="Indian"
     case Nindian="North Indian Recipes"
     case SIndian="South Indian Recipes"
@@ -17,6 +18,7 @@ enum Category:String{
     case punjabi="Punjabi"
     
 }
+
 struct Recipe:Identifiable{
     let id=UUID()
     let name:String
@@ -27,7 +29,9 @@ struct Recipe:Identifiable{
     let url:String
     let imageurl:String
     let IngredientCount:String
+    
 }
+
 extension Recipe{
     static let all:[Recipe]=[
         Recipe(

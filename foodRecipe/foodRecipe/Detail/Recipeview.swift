@@ -32,7 +32,7 @@ struct Recipeview: View {
                         .bold()
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
-                Text("(Average Time For Cooking - \(recipe.Time) Minutes)").font(.headline)
+                    Text("(Average Time For Cooking - \(recipe.Time) Minutes)").font(.headline)
                     VStack(alignment: .leading,spacing: 10){
                         Text("INGREDIENTS:").bold()
                         Text(recipe.Ingredients)
