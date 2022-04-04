@@ -31,7 +31,7 @@ struct RecipeCard: View {
                     .padding(.bottom)
             }
         }
-        .frame(width: 300, height:300)
+        .frame(width: 350, height:350)
         .background(LinearGradient(gradient: Gradient(colors: [Color(.gray).opacity(0.2),Color(.gray)]), startPoint: .top, endPoint: .bottom))
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .shadow(color: Color.black.opacity(0.5), radius: 15, x: 0, y: 10)
