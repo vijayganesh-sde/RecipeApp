@@ -55,9 +55,7 @@ struct favouritesView: View {
                                         showingAlert = true
                                     favourites.append(nam)
                                     }
-                                    .alert("Added To Favourites✌️", isPresented: $showingAlert) {
-                                        Button("OK", role: .cancel) { }
-                                    }
+                                    
                             }
                         }
                     }.navigationTitle("Favourites")
